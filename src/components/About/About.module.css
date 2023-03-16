@@ -1,0 +1,29 @@
+.about{
+    display: flex;
+    margin-top: 10%;
+    margin-left: 35%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 39%, rgba(8,133,6,0.6446953781512605) 100%);
+    padding: 3%;
+    
+}
+.h1{
+    color: whitesmoke;
+    font-size: 40px;
+    font-family: 'Get Schwifty';
+}
+.h2{
+    color: whitesmoke;
+    font-size: 30px;
+    font-family: 'Get Schwifty';
+}
+.p{
+    font-size: 20px;
+    color: whitesmoke;
+    font-family: 'Get Schwifty';
+}

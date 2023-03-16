@@ -1,0 +1,11 @@
+.app{
+    background-image: url('./asserts/545010-rick-and-morty.jpg');
+    background-position: center center;
+    min-width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+}
+
+
+
+
