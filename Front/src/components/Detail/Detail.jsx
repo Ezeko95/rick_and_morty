@@ -1,42 +1,24 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import useCharacter from "../../hooks/useCharacter";
 
+const Detail = () => {
+  const character = useCharacter();
 
+  return (
+    <div>
+      {character.name ? (
+        <>
+          <h2>{character.name}</h2>
+          <p>{character.status}</p>
+          <p>{character.species}</p>
+          <p>{character.gender}</p>
+          <p>{character.origin?.name}</p>
+          <img src={character.image} alt="img" />
+        </>
+      ) : (
+        <h3>Loading...</h3>
+      )}
+    </div>
+  );
+};
 
-export default function Detail() {
-    const {detailId} = useParams();
-
-    const [character, setCharacter] = useState({});
-
-    useEffect(() => {
-        fetch(`http://localhost:3001/rickandmorty/detail/${detailId}`)
-          .then((response) => response.json())
-          .then((char) => {
-            if (char.name) {
-              setCharacter(char);
-            } else {
-              window.alert("No hay personajes con ese ID");
-            }
-          })
-          .catch((err) => {
-            window.alert("No hay personajes con ese ID");
-          });
-        return setCharacter({});
-      }, [detailId]);
-
-    return (
-        <div>
-            <button> 
-                <Link to="/detail">Detail</Link>
-            </button>
-            <h2>{character.name}</h2>
-            <p>{character.specie}</p>
-            <p>{character.gender}</p>
-            <p>{character.origin?.name}</p>
-            <p>{character.status}</p>
-            <img src={character.image} alt="404"/>
-
-        </div>
-    )
-}
+export default Detail;

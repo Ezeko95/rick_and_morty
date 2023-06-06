@@ -3,20 +3,21 @@
     justify-content: space-between;
     text-align: center;
     flex-direction: row-reverse;
-    background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 21%, rgba(8,133,6,0.6446953781512605) 100%);
+    
 }
 
 .searchbar{
     display: flex;
-    width: 30%;
-    justify-content: center;    
+    width: 15%;
+    justify-content: center;
+    margin-right: 10%;
+
 }
 
 .links{
     padding: 5px;
-    border-radius: 10px;
-    margin-left: 30px;    
+    margin-left: 30px;
 }
 .text{
     color: white;

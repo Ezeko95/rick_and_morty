@@ -6,11 +6,11 @@ const Login = ({login}) => {
 
     const [userData, setUserData] = useState({ 
         username: "", 
-        password: "",
+        password: ""
     });
     const [errors, setErrors] = useState({
         username: "",
-        password: "",
+        password: ""
     });
 
 
@@ -33,7 +33,7 @@ const Login = ({login}) => {
     return (
         <form onSubmit={submitHandler}>
             <div className={styled.div1}>
-                <label>Usuario:</label>
+                <label htmlFor="username">Usuario:</label>
                 <input 
                 type='text' 
                 name="username"
